@@ -3,3 +3,9 @@
 	width: 736px;
 	max-width: 100%;
 }
+
+@media (max-width: 720px) {
+	.tasksContainer {
+		padding: 0 2%;
+	}
+}
