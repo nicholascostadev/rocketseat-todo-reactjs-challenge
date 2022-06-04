@@ -1,0 +1,36 @@
+.tasksHeader {
+	display: flex;
+	justify-content: space-between;
+
+	margin-bottom: 1.5rem;
+}
+
+.createdTasks strong {
+	color: var(--blue-400);
+	font-size: 0.875rem;
+}
+
+.createdTasks strong span {
+	color: var(--gray-200);
+
+	font-weight: bold;
+	font-size: 0.75rem;
+	border-radius: 9999px;
+	background: var(--gray-400);
+	padding: 0.125rem 0.5rem;
+}
+
+.concludedTasks strong {
+	color: var(--purple-400);
+	font-size: 0.875rem;
+}
+
+.concludedTasks strong span {
+	background: var(--gray-400);
+	border-radius: 9999px;
+
+	color: var(--gray-200);
+	font-weight: bold;
+	font-size: 0.75rem;
+	padding: 0.125rem 0.5rem;
+}

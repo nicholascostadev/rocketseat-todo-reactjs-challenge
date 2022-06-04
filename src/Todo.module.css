@@ -1,0 +1,79 @@
+.container {
+	background: var(--gray-500);
+	border-radius: 8px;
+	border: 1px solid var(--gray-400);
+	padding: 1rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.container + .container {
+	margin-top: 0.75rem;
+}
+.container > input[type='checkbox'] {
+	width: 18px;
+	height: 18px;
+
+	background: transparent;
+	outline: 1px solid var(--blue-400);
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-o-appearance: none;
+
+	border-radius: 9999px;
+	cursor: pointer;
+
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: background-color 0.2s, outline 0.2s;
+}
+
+.container > input[type='checkbox']:checked {
+	background: var(--purple-700);
+	outline: 1px solid var(--purple-700);
+	color: var(--gray-100);
+}
+
+.container > input[type='checkbox']:checked::after {
+	content: '\2714';
+	font-size: 12px;
+	top: 0px;
+	left: 3px;
+	color: var(--gray-100);
+}
+
+.container p {
+	flex: 0.95;
+	line-height: 1.4;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+.container svg {
+	transition: 0.2s color;
+	color: var(--gray-300);
+}
+
+.container svg:hover {
+	color: var(--red-500);
+	cursor: pointer;
+}
+
+.container.activeCheckbox {
+	background: var(--gray-500);
+	border: 1px solid var(--gray-500);
+	padding: 1rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.container.activeCheckbox p {
+	text-decoration: line-through;
+	color: var(--gray-300);
+}
