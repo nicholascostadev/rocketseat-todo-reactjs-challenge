@@ -7,7 +7,6 @@ import { TasksHeader } from "./TasksHeader";
 import { useEffect, useState } from "react";
 import { Todo } from "./Todo";
 import clipboardImage from "./assets/Clipboard.svg";
-import { ToastContainer } from "react-toastify";
 
 interface TodoType {
   id: string;
