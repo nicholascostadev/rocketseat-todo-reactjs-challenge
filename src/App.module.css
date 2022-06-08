@@ -4,6 +4,21 @@
 	max-width: 100%;
 }
 
+.noTodos {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noTodos > img {
+  margin-bottom: 1rem;
+}
+
+.noTodos > * {
+  color: var(--gray-300)
+}
+
 @media (max-width: 720px) {
 	.tasksContainer {
 		padding: 0 2%;
