@@ -17,7 +17,7 @@ export function Todo({
 	onTodoDelete,
 }: TodoProps) {
 	return (
-		<div
+		<li
 			id={id}
 			className={
 				isDone
@@ -28,6 +28,6 @@ export function Todo({
 			<input type="checkbox" onClick={() => onTodoDone(id)} />
 			<p>{content}</p>
 			<Trash size={18} onClick={() => onTodoDelete(id)} />
-		</div>
+		</li>
 	);
 }

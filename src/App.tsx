@@ -4,9 +4,11 @@ import styles from "./App.module.css";
 import { Header } from "./Header";
 import { Input } from "./Input";
 import { TasksHeader } from "./TasksHeader";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Todo } from "./Todo";
 import clipboardImage from "./assets/Clipboard.svg";
+import autoAnimate from "@formkit/auto-animate";
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 interface TodoType {
   id: string;
@@ -16,6 +18,7 @@ interface TodoType {
 
 function App() {
   const [todos, setTodos] = useState<TodoType[]>([]);
+  const [parent] = useAutoAnimate<HTMLUListElement>()
 
   useEffect(() => {
     const localTodos = localStorage.getItem("todos");
@@ -49,13 +52,15 @@ function App() {
   };
   console.log(todos);
 
+
+
   return (
     <div className="App">
       <Header />
       <main className={styles.tasksContainer}>
         <Input onAddTodo={handleAddTodo} todos={todos} />
         <TasksHeader todosList={todos} />
-        <div className={styles.tasks}>
+        <ul className={styles.tasks} ref={parent}>
           {todos &&
             todos.map((todo) => (
               <Todo
@@ -74,7 +79,7 @@ function App() {
               <p>Crie tarefas e organize seus itens a fazer</p>
             </div>
           ) : null}
-        </div>
+        </ul>
       </main>
     </div>
   );
